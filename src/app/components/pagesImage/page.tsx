@@ -1,12 +1,12 @@
 import React from "react";
-import { foodList } from "../pageArray/page";
+import { FoodList } from "../pageArray/page";
 import Image from "next/image";
 
 export default function BlogArray() {
   return (
     <div className="md:px-[110px] px-4 py-10 bg-[#F9F9F7]">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {foodList.map((item, index) => (
+        {FoodList.map((item, index) => (
           <div
             key={index}
             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"

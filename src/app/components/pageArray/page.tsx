@@ -3,7 +3,7 @@
 //   description: string;
 //   image: string;
 // }
-export const foodList = [
+export const FoodList = [
   // export const foodList: FoodListType[] = [
   {
     date: "January 3, 2023",
