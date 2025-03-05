@@ -10,7 +10,7 @@ interface FoodCategory {
   items: FoodItem[];
 }
 
-export const foodCategories: FoodCategory[] = [
+export const FoodCategories: FoodCategory[] = [
   {
     category: "All",
     items: [

@@ -111,11 +111,11 @@ export default function FormComp() {
             {...register("message", {
               required: "Message is required",
             })}
-            cols="10"
-            rows="4"
+            // cols=Number("10")
+            // rows="4"
             placeholder="Write your message"
             autoFocus
-            className="w-full rounded-lg px-3 py-2 outline outline-1"
+            className="w-full rounded-lg px-3 py-2 outline outline-1 md:w-full h-fit"
           ></textarea>
           {errors.message && (
             <p className="text-red-500 text-[12px]">{errors.message.message}</p>

@@ -1,5 +1,5 @@
 import React from 'react'
-import HeadlinesPages from '../components/pagesheadlines/page'
+import HeadlinesPages from '../components/pagesheadlines/Headers'
 import BlogArray from '../components/pagesImage/page'
 
 export default function Pages() {

@@ -1,6 +1,6 @@
 import React from "react";
 import NavigatedButtons from "../components/outPhotoCom/page";
-import HeadlinesPages from "../components/pagesheadlines/page";
+import HeadlinesPages from "../components/pagesheadlines/Headers";
 import MenuDetail from "../components/menuDetails/page";
 
 export default function Menu() {

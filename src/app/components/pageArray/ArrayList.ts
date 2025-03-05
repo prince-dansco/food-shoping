@@ -1,10 +1,9 @@
-// interface FoodListType {
-//   date: string;
-//   description: string;
-//   image: string;
-// }
-export const FoodList = [
-  // export const foodList: FoodListType[] = [
+interface FoodListType {
+  date: string;
+  description: string;
+  image: string;
+}
+export const FoodArray: FoodListType[] = [
   {
     date: "January 3, 2023",
     description: "Top 20 simple and quick desserts for kids",
