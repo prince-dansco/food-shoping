@@ -12,14 +12,17 @@ export default function BlogArray() {
             className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
           >
             <Image
-              src={item.image}
+              src={item?.image}
               alt="food list"
               width={100}
               height={192}
               quality={100}
               priority
-              className="w-full h-48 object-cover"
+              className="w-full h-auto object-cover"
             />
+
+
+          
             <div className="p-6">
               <p className="text-sm text-[#737865]">{item.date}</p>
               <h2 className="text-xl font-dmSans font-medium text-[#2C2F24] mt-2">
