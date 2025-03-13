@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavbarComp from "./components/Navbar/page";
-import Footer from "./components/footercomp/page";
+// import Footer from "./components/footercomp/page";
+import UpdatedFooter from "./components/footercomp/updatedFooter";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   title: "Food  shopping",
@@ -28,11 +20,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={` `}
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavbarComp />
         {children}
-        <Footer />
+        {/* <Footer /> */}
+        <UpdatedFooter />
       </body>
     </html>
   );

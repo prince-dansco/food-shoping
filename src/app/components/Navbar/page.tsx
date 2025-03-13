@@ -10,58 +10,57 @@ import {
   FaGithub,
   FaInstagram,
   FaTimes,
+  FaTwitter,
 } from "react-icons/fa";
-import logo1 from "../../../../public/images/image/logo.png";
-import { FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { navList } from "@/app/const/constDataNav";
+import logo1 from "../../../../public/images/image/logo.png";
 
 export default function NavbarComp() {
-  const [click, setClick] = useState<boolean>(false);
+  const [click, setClick] = useState(false);
   const pathname = usePathname();
 
-  const handleToggle = () => {
-    setClick(!click);
-  };
+  const handleToggle = () => setClick((prev) => !prev);
 
-  const isActive = (path: string) => {
-    return pathname === path ? "bg-gray-500 rounded-[25px] p-2 opacity-2 " : "";
-  };
+  const isActive = (path: string) =>
+    pathname === path ? "bg-[#DBDFD0] rounded-full p-2 " : "";
 
   return (
-    <div className="">
-      <div className=" bg-[#474747] px-4 py-3 md:px-[110px]  text-white  flex  items-center justify-between">
-        <div className="md:flex items-center sm:text-center gap-6">
+    <div>
+      {/* Top Bar */}
+      <div className="bg-[#474747] px-4 py-3 md:px-[110px] text-white flex items-center justify-between">
+        <div className="md:flex items-center gap-6">
           <div className="flex items-center">
-            <IoIosCall size={20} className="hidden md:block" />{" "}
-            <span className="mx-2  font-dmSan sm:text-[12px]">
+            <IoIosCall size={20} className="hidden md:block" />
+            <span className="mx-2 font-dmSan sm:text-[12px]">
               (414) 857-0107
             </span>
           </div>
-          <div className=" flex items-center  ">
-            <FaEnvelope size={15} className="hidden md:block" />{" "}
-            <span className="mx-2 font-dmSan sm:text-[18px] hidden md:block ">
+          <div className="flex items-center">
+            <FaEnvelope size={15} className="hidden md:block" />
+            <span className="mx-2 font-dmSan sm:text-[18px] hidden md:block">
               yummy@bistrobliss
             </span>
           </div>
         </div>
-
-        <div className="flex items-center  gap-2">
-          <div className="bg-[#363636] p-2 rounded-full flex items-center justify-center">
-            <FaTwitter size={15} />
-          </div>
-          <div className="bg-[#363636] p-2 rounded-full flex items-center justify-center">
-            <FaFacebookF size={15} />
-          </div>
-          <div className="bg-[#363636] p-2 rounded-full flex items-center justify-center">
-            <FaInstagram size={15} />
-          </div>
-          <div className="bg-[#363636] p-2 rounded-full flex items-center justify-center">
-            <FaGithub size={15} />
-          </div>
+        <div className="flex items-center gap-2">
+          {[FaTwitter, FaFacebookF, FaInstagram, FaGithub].map(
+            (Icon, index) => (
+              <div
+                key={index}
+                className="bg-[#363636] p-2 rounded-full flex items-center justify-center"
+              >
+                <Icon size={15} />
+              </div>
+            )
+          )}
         </div>
       </div>
-      <div className="md:flex items-center md:px-[110px] justify-between py-6">
+
+      {/* Navbar */}
+      <div className="md:flex items-center md:px-[111px] justify-between py-6 fixed top-14 w-full bg-white shadow-md z-50">
+        {/* Logo and Mobile Menu Toggle */}
         <div className="flex items-center justify-between w-full md:w-auto px-3 md:px-0">
           <div className="flex items-center gap-4">
             <Image
@@ -77,75 +76,50 @@ export default function NavbarComp() {
               Bistro Bliss
             </h1>
           </div>
-
-          <div
+          <button
+            aria-label="Toggle Menu"
             onClick={handleToggle}
             className="md:hidden block cursor-pointer"
           >
-            {!click ? <FaBars size={20} /> : <FaTimes size={20} />}
-          </div>
+            {click ? <FaTimes size={20} /> : <FaBars size={20} />}
+          </button>
         </div>
-        {/*  */}
-        <div className="hidden md:flex items-center gap-6">
-          <ul className="text-lg font-playfair flex items-center gap-6">
-            <li>
-              <Link href="/" className={isActive("/")}>
-                Home
-              </Link>
-            </li>
-           
-            <li>
-              <Link href="/menupage" className={isActive("/menupage")}>
-                Menu
-              </Link>
-            </li>
-            <li>
-              <Link href="/pagelight" className={isActive("/pagelight")}>
-                Pages
-              </Link>
-            </li>
-            <li>
-              <Link href="/contactpage" className={isActive("/contactpage")}>
-                Contact
-              </Link>
-            </li>
-          </ul>
+
+        {/* Desktop Menu */}
+        <div className={`hidden md:flex items-center gap-3`}>
+          {navList.map((link, index) => (
+            <Link
+              key={index}
+              href={link.href}
+              className={`${isActive(
+                link.href
+              )} px-4 py-2 text-[#2C2F24] font-semibold text-base font-dmSans`}
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
         <div className="hidden md:block">
-          <div className="relative group">
-            <button className="px-6 py-3 rounded-[35px] outline outline-1 hover:bg-slate-400">
-              Book a Table
-            </button>
-            <span className="absolute bottom-10 left-[5px] transform -translate-x-1/2 bg-gray-700 text-white text-sm rounded py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              Book a Table
-            </span>
-          </div>
+          <button className="px-6 py-3 rounded-[35px] outline outline-1 hover:bg-slate-400">
+            Book a Table
+          </button>
         </div>
-        {click && (
-          <div className="md:hidden mt-4 z-99">
-            <ul className="text-lg font-playfair flex flex-col items-center gap-4">
-              <li>
-                <Link href="/" className={isActive("/")}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/menupage" className={isActive("/menupage")}>
-                  Menu
-                </Link>
-              </li>
-              <li>
-                <Link href="/pagelight" className={isActive("/pagelight")}>
-                  Pages
-                </Link>
-              </li>
-              <li>
-                <Link href="/contactpage" className={isActive("/contactpage")}>
-                  Contact
-                </Link>
-              </li>
-            </ul>
 
+        {/* Mobile Menu */}
+        {click && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-black text-white py-4 z-50 flex flex-col items-center text-center">
+            {navList.map((link, index) => (
+              <Link
+                key={index}
+                href={link.href}
+                className={`${isActive(
+                  link.href
+                )} px-4 py-2 text-[#2C2F24] font-semibold text-base font-dmSans block`}
+                onClick={() => setClick(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
             <div className="flex justify-center mt-4">
               <button className="px-6 py-3 rounded-[35px] outline outline-1 max-w-[200px] w-full">
                 Book a Table
@@ -154,6 +128,9 @@ export default function NavbarComp() {
           </div>
         )}
       </div>
+
+      {/* Add padding to prevent content overlap */}
+      <div className="pt-[100px]"></div>
     </div>
   );
 }

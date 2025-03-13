@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { FoodCategories } from "../photoArray/PhotosImages";
+import { FoodCategories } from "@/app/const/constDataMenu";
 
 interface FoodItem {
   title: string;
@@ -24,9 +24,9 @@ export default function NavigatedButtons() {
       : FoodCategories.find((cat) => cat.category === currentCategory)?.items;
 
   return (
-    <div className=" md:px-[110px] px-3">
-      <div className="min-h-screen p-8">
-        <div className="md:flex  sm:flex-wrap  gap-0 sm:gap-3 justify-center md:space-x-4  space-x-2 mb-8">
+    <div className=" md:px-[110px] px-2">
+      <div className="min-h-screen md:p-8  p-4">
+        <div className="md:flex  sm:flex-wrap  gap-0 sm:gap-3 justify-center md:space-x-4  space-x-2 ">
           {FoodCategories.map((cat) => (
             <button
               key={cat.category}
@@ -39,7 +39,7 @@ export default function NavigatedButtons() {
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 my-12">
           {filteredItems && filteredItems.length > 0 ? (
             filteredItems.map((item, index) => (
               <div
@@ -55,15 +55,17 @@ export default function NavigatedButtons() {
                   height={160}
                   className="w-full h-40 object-cover mb-4 rounded-lg"
                 />
-                <p className="text-[#AD343E] text-1xl  font-semibold mb-2">
-                  {item.price}
-                </p>
-                <h2 className="text-lg font-semibold text-[#2C2F24] mb-2">
-                  {item.title}
-                </h2>
-                <p className="text-sm text-[#414536]  mb-2 py-2">
-                  {item.description}
-                </p>
+                <div className="p-3">
+                  <p className="text-[#AD343E] text-2xl font-dmSans font-bold ">
+                    {item.price}
+                  </p>
+                  <h2 className="text-xl font-bold text-[#2C2F24] font-dmSans my-2">
+                    {item.title}
+                  </h2>
+                  <p className="text-base text-[#414536]  font-dmSans font-normal  py-2">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             ))
           ) : (
