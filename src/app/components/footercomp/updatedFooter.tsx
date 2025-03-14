@@ -48,7 +48,7 @@ export default function UpdatedFooter() {
           <h1 className="text-white mb-4 ">Pages</h1>
           <div className="text-[#ADB29E]">
             {pages.map((page, index) => (
-              <p key={index}>{page}</p>
+              <p key={index} className="cursor-pointer">{page}</p>
             ))}
           </div>
         </div>

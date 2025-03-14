@@ -58,11 +58,11 @@ export default function NavbarComp() {
         </div>
       </div>
 
-      {/* Navbar */}
-      <div className="md:flex items-center md:px-[111px] justify-between py-6 fixed top-14 w-full bg-white shadow-md z-50">
-        {/* Logo and Mobile Menu Toggle */}
+      
+      <div className="md:flex items-center md:px-[111px] justify-between py-4 fixed top-14 w-full bg-white shadow-md z-50">
+      
         <div className="flex items-center justify-between w-full md:w-auto px-3 md:px-0">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <Image
               src={logo1}
               width={50}
@@ -70,9 +70,9 @@ export default function NavbarComp() {
               alt="logo"
               quality={100}
               priority
-              className="hidden md:block"
+              className=""
             />
-            <h1 className="text-[#474747] md:text-4xl text-[20px] font-bold font-playfair italic">
+            <h1 className="text-[#474747] md:text-4xl text-xl font-bold font-playfair italic">
               Bistro Bliss
             </h1>
           </div>
