@@ -1,4 +1,4 @@
-import Wallpaper from "./components/wallpaper/page";
+import Wallpaper from "./components/globalComp/wallpaper/page";
 
 export default function Home() {
   return (

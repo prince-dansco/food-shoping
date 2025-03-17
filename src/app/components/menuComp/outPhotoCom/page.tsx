@@ -24,14 +24,14 @@ export default function NavigatedButtons() {
       : FoodCategories.find((cat) => cat.category === currentCategory)?.items;
 
   return (
-    <div className=" md:px-[110px] px-2">
-      <div className="min-h-screen md:p-8  p-4">
+    <div className="md:px-[25px] lg:px-[110px] px-2">
+      <div className="min-h-screen md:p-5  p-4">
         <div className="md:flex  sm:flex-wrap  gap-0 sm:gap-3 justify-center md:space-x-4  space-x-2 ">
           {FoodCategories.map((cat) => (
             <button
               key={cat.category}
               className={`px-6 py-2  my-4 outline outline-1 ${
-                currentCategory === cat.category ? "bg-[#AD343E]" : "border-2"
+                currentCategory === cat.category ? "bg-[#AD343E] text-white" : "border-2"
               } text-black rounded-[3em] `}
               onClick={() => handleFilter(cat.category)}
             >
@@ -59,7 +59,7 @@ export default function NavigatedButtons() {
                   <p className="text-[#AD343E] text-2xl font-dmSans font-bold ">
                     {item.price}
                   </p>
-                  <h2 className="text-xl font-bold text-[#2C2F24] font-dmSans my-2">
+                  <h2 className="text-xl font-bold md:text-lg text-[#2C2F24] font-dmSans my-2">
                     {item.title}
                   </h2>
                   <p className="text-base text-[#414536]  font-dmSans font-normal  py-2">

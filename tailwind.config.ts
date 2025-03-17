@@ -14,6 +14,13 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
         spaceGrotesk: ['Space Grotesk', 'sans-serif'],
       },
+      screens: {
+        // sm: '250px',    // 250px to 499px
+        // md1: '500px',   // 500px to 699px
+        // md2: '700px',   // 700px to 899px
+        // lg1: '900px',   // 900px to 1123px
+        // xl: '1124px',   // 1124px and above (optional)
+      },
     },
   },
   plugins: [],

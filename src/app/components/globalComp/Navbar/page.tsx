@@ -15,7 +15,8 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navList } from "@/app/const/constDataNav";
-import logo1 from "../../../../public/images/image/logo.png";
+import logo1 from "../../../../../public/images/image/logo.png";
+// import logo1 from "../public/images/image/logo.png";
 
 export default function NavbarComp() {
   const [click, setClick] = useState(false);
@@ -29,7 +30,7 @@ export default function NavbarComp() {
   return (
     <div>
       {/* Top Bar */}
-      <div className="bg-[#474747] px-4 py-3 md:px-[110px] text-white flex items-center justify-between">
+      <div className="bg-[#474747] px-4 py-3 md:px-[25px] lg:px-[110px] fixed top-0 w-full text-white flex items-center justify-between">
         <div className="md:flex items-center gap-6">
           <div className="flex items-center">
             <IoIosCall size={20} className="hidden md:block" />
@@ -59,7 +60,7 @@ export default function NavbarComp() {
       </div>
 
       
-      <div className="md:flex items-center md:px-[111px] justify-between py-4 fixed top-14 w-full bg-white shadow-md z-50">
+      <div className="md:flex items-center px-6 md:px-[25px] lg:px-[111px] justify-between py-4 fixed top-[52px] w-full bg-white shadow-md z-50">
       
         <div className="flex items-center justify-between w-full md:w-auto px-3 md:px-0">
           <div className="flex items-center gap-2 md:gap-4">
@@ -72,7 +73,7 @@ export default function NavbarComp() {
               priority
               className=""
             />
-            <h1 className="text-[#474747] md:text-4xl text-xl font-bold font-playfair italic">
+            <h1 className="text-[#474747] md:text-xl lg:text-4xl text-xl font-bold font-playfair italic">
               Bistro Bliss
             </h1>
           </div>
@@ -129,7 +130,7 @@ export default function NavbarComp() {
         )}
       </div>
 
-      {/* Add padding to prevent content overlap */}
+      
       <div className="pt-[100px]"></div>
     </div>
   );

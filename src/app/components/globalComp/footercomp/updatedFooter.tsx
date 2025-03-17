@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import image1 from "../../../../public/images/icons/footer_logo.png";
+import image1 from "../../../../../public/images/icons/footer_logo.png";
 import { FaFacebookF, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import { pages,utilityPages,instagramImages } from "@/app/const/constFooterData";
 export default function UpdatedFooter() {
   return (
-    <div className="bg-[#474747] md:px-[110px] py-16">
+    <div className="bg-[#474747] md:px-[35px] lg:px-[110px] py-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-3 gap-5 justify-center">
         {/* Logo and Social Media */}
         <div>
@@ -64,8 +64,8 @@ export default function UpdatedFooter() {
         </div>
 
         {/* Instagram Images */}
-        <div>
-          <h1 className="text-white mb-4">Follow Us on Instagram</h1>
+        <div className="justify-self-center ">
+          <h1 className="text-white mb-4 ">Follow Us on Instagram</h1>
           <div className="grid md:grid-cols-2 grid-cols-2 gap-4">
             {instagramImages.map((image, index) => (
               <Image

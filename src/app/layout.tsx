@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavbarComp from "./components/Navbar/page";
+import NavbarComp from "./components/globalComp/Navbar/page";
 // import Footer from "./components/footercomp/page";
-import UpdatedFooter from "./components/footercomp/updatedFooter";
+import UpdatedFooter from "./components/globalComp/footercomp/updatedFooter";
 
 
 

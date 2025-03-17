@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from "next/link";
-import image2 from "../../../../public/images/image/Chocolate_Icecream.png";
-// import image2 from "../../public/images/image/page_3.png";
+import image2 from "../../../../../public/images/image/Chocolate_Icecream.png";
 
 
 export default function Wallpaper() {
@@ -24,7 +23,7 @@ export default function Wallpaper() {
           }}
           className=" md:h-[70vh]"
         >
-          <div className=" backdrop:marker:visited:last:odd:only:text-red-300 md:px-[110px] opacity-50 md:py-[30px] py-3 bg-black ">
+          <div className=" backdrop:marker:visited:last:odd:only:text-red-300 md:px-[70px] lg:px-[110px] opacity-50 md:py-[30px] py-3 bg-black ">
             <h1 className="md:text-4xl text-md font-bold mb-4">
               Welcome to the Best Eatery : <br />
               <span

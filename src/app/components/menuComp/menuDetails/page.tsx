@@ -10,9 +10,9 @@ import {
 export default function MenuDetail() {
   return (
     <div>
-      <div className=" md:px-[110px] px-5 bg-[#F9F9F7] py-10 md:flex items-center   justify-between gap-8 mt-6">
-        <div className="max-w-[550px] w-full text-center md:text-start">
-          <h2 className="text-[#2C2F24] md:text-6xl  text-xl font-semibold md:my-5 my-2 ">
+      <div className="  md:px-[35px] lg:px-[110px] px-5 bg-[#F9F9F7] py-10 md:flex items-center   justify-between gap-8 mt-6">
+        <div className="max-w-[550px] w-30%] text-center md:text-start">
+          <h2 className="text-[#2C2F24] md:text-3xl lg:text-6xl  text-xl font-semibold md:my-5 my-2 ">
             You can order through apps
           </h2>
           <p className="text-[#414536] md:text-[16px] max-w-[382px] w-full text-[13px]">
@@ -20,9 +20,9 @@ export default function MenuDetail() {
             bibendum sed et aliquet aliquet risus tempor semper.
           </p>
         </div>
-        <div className="py-12  px-4 md:px-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 ">
-            <div className="px-4 py-3 bg-white text-xl text-center rounded-md shadow-xl">
+        <div className="py-12  px-4 md:px-0 w-[60%]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-3 ">
+            <div className="px-4 py-3 bg-white text-xl text-center rounded-md shadow-xl max-w-[150px] w-full">
               <button className="font-bold">
                 Uber <span className="text-[#05C167]">Eats</span>
               </button>
