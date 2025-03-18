@@ -16,6 +16,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navList } from "@/app/const/constDataNav";
 import logo1 from "../../../../../public/images/image/logo.png";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
+
 // import logo1 from "../public/images/image/logo.png";
 
 export default function NavbarComp() {
@@ -59,9 +62,7 @@ export default function NavbarComp() {
         </div>
       </div>
 
-      
       <div className="md:flex items-center px-6 md:px-[25px] lg:px-[111px] justify-between py-4 fixed top-[52px] w-full bg-white shadow-md z-50">
-      
         <div className="flex items-center justify-between w-full md:w-auto px-3 md:px-0">
           <div className="flex items-center gap-2 md:gap-4">
             <Image
@@ -100,10 +101,20 @@ export default function NavbarComp() {
             </Link>
           ))}
         </div>
-        <div className="hidden md:block">
+        {/* <div className="hidden md:block">
           <button className="px-6 py-3 rounded-[35px] outline outline-1 hover:bg-slate-400">
             Book a Table
           </button>
+        </div> */}
+        <div className="hidden md:block">
+          <button
+            className="px-6 py-3 rounded-[35px] outline outline-1 hover:bg-slate-400"
+            data-tooltip-id="book-table-tooltip"
+            data-tooltip-content="Reserve your table now!"
+          >
+            Book A Table
+          </button>
+          <Tooltip id="book-table-tooltip" />
         </div>
 
         {/* Mobile Menu */}
@@ -130,7 +141,6 @@ export default function NavbarComp() {
         )}
       </div>
 
-      
       <div className="pt-[100px]"></div>
     </div>
   );

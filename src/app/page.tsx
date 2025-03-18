@@ -1,9 +1,8 @@
-import Wallpaper from "./components/globalComp/wallpaper/page";
-
+ import MenuPage from "./menupage/page"
 export default function Home() {
   return (
-    <main className="bg-[#979794]">
-      <Wallpaper />
+    <main className="bg-[#e7e7d5]">
+     < MenuPage/>
     </main>
   );
 }

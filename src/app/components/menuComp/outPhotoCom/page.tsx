@@ -26,13 +26,13 @@ export default function NavigatedButtons() {
   return (
     <div className="md:px-[25px] lg:px-[110px] px-2">
       <div className="min-h-screen md:p-5  p-4">
-        <div className="md:flex  sm:flex-wrap  gap-0 sm:gap-3 justify-center md:space-x-4  space-x-2 ">
+        <div className="md:flex  sm:flex-wrap  gap-0 sm:gap-2 justify-self-center  md:space-x-4  space-x-2 ">
           {FoodCategories.map((cat) => (
             <button
               key={cat.category}
-              className={`px-6 py-2  my-4 outline outline-1 ${
+              className={`px-6 py-2  my-4 outline outline-1  font-bold text-base font-dmSans w-[150px] ${
                 currentCategory === cat.category ? "bg-[#AD343E] text-white" : "border-2"
-              } text-black rounded-[3em] `}
+              } text-black rounded-full `}
               onClick={() => handleFilter(cat.category)}
             >
               {cat.category}
