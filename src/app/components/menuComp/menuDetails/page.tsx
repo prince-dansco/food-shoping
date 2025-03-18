@@ -22,37 +22,37 @@ export default function MenuDetail() {
         </div>
         <div className="py-12  px-4 md:px-0 items-center w-full  justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-4 ">
-            <div className="px-4 py-3 bg-white text-xl text-center rounded-md shadow-xl ">
+            <div className="p-4 bg-white text-xl text-center rounded-md shadow-xl ">
               <button className="font-bold">
                 Uber <span className="text-[#05C167]">Eats</span>
               </button>
             </div>
-            <div className="px-4 py-3 bg-white text-xl rounded-md text-center shadow-lg text-[#F63440]">
+            <div className="p-4 bg-white text-xl rounded-md text-center shadow-lg text-[#F63440]">
               <button className="font-bold "> GRUBHUB</button>
             </div>
-            <div className="px-4 py-3 bg-white text-xl rounded-md text-center shadow-lg text-[#000000]">
+            <div className="p-4 bg-white text-xl rounded-md text-center shadow-lg text-[#000000]">
               <button className=" font-bold">Postmates</button>
             </div>
-            <div className="px-6 py-3 bg-white text-lg rounded-md shadow-lg text-[#FF3008] flex justify-center  items-center  ">
+            <div className="p-4 bg-white text-lg rounded-md shadow-lg text-[#FF3008] flex justify-center  items-center  ">
               <SiDoordash className="flex-none mr-1" />
               <button className="font-semibold">DOORDASH</button>
             </div>
-            <div className=" px-6 py-3 bg-white text-xl rounded-md shadow-lg text-[#D70F64] flex justify-center items-center">
+            <div className=" p-4 bg-white text-xl rounded-md shadow-lg text-[#D70F64] flex justify-center items-center">
               <SiFoodpanda className="flex-none mr-1" />
               <button className=" font-semibold">foodpanda</button>
             </div>
-            <div className=" bg-white text-xl rounded-md shadow-lg px-6 py-3  text-[#00CCBC] flex justify-center items-center">
+            <div className=" bg-white text-xl rounded-md shadow-lg p-4  text-[#00CCBC] flex justify-center items-center">
               <SiDeliveroo className="text-[#00CCBC] flex-none mr-1 " />
               <button className="font-semibold ">deliveroo</button>
             </div>
-            <div className="px-6 py-3 bg-white text-xl rounded-md shadow-lg text-[#43B02A] flex justify-center items-center">
+            <div className="p-4 bg-white text-xl rounded-md shadow-lg text-[#43B02A] flex justify-center items-center">
               <SiInstacart className="text-[#FF8200] flex-none mr-1" />
               <button className=" font-bold"> instacart</button>
             </div>
-            <div className="px-4 py-3 bg-white text-xl text-center rounded-md shadow-lg text-[#FF3131]">
+            <div className="p-4 bg-white text-xl text-center rounded-md shadow-lg text-[#FF3131]">
               <button className="font-bold"> JUSTEAT </button>
             </div>{" "}
-            <div className="px-6 py-3 bg-white text-lg rounded-md shadow-lg text-[#2C2F24] flex justify-center items-center">
+            <div className="p-4 bg-white text-lg rounded-md shadow-lg text-[#2C2F24] flex justify-center items-center">
               <SiAdidas className="text-[#FC9153] flex-none mr-1 " />
               <button className=" font-semibold">
                 DiDi <span className="ml-1">Food</span>

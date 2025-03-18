@@ -26,7 +26,7 @@ export default function NavigatedButtons() {
   return (
     <div className="md:px-[25px] lg:px-[110px] px-2">
       <div className="min-h-screen md:p-5  p-4">
-        <div className="md:flex  sm:flex-wrap  gap-0 sm:gap-2 justify-self-center  md:space-x-4  space-x-2 ">
+        <div className="flex  flex-wrap   justify-center items-center gap-3 ">
           {FoodCategories.map((cat) => (
             <button
               key={cat.category}
